@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-Restaurant-1ADD33CC-3D1F-41CD-BC80-A55EFDA070C0</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Admins\**" />
+    <Compile Remove="Views\Users\**" />
+    <Content Remove="Views\Admins\**" />
+    <Content Remove="Views\Users\**" />
+    <EmbeddedResource Remove="Views\Admins\**" />
+    <EmbeddedResource Remove="Views\Users\**" />
+    <None Remove="Views\Admins\**" />
+    <None Remove="Views\Users\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\AdminsController.cs" />
+    <Compile Remove="Controllers\MenusController.cs" />
+    <Compile Remove="Controllers\ReviewsController.cs" />
+    <Compile Remove="Controllers\UsersController.cs" />
+    <Compile Remove="Data\Migrations\20190403201550_Initial.cs" />
+    <Compile Remove="Data\Migrations\20190403201550_Initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.7" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Data\" />
+    <Folder Include="Areas\Identity\Services\" />
+  </ItemGroup>
+
+</Project>
